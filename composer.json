@@ -1,0 +1,28 @@
+{
+  "name": "clesson-de/silverstripe-charfilter",
+  "description": "A component for the Silverstripe Gridfield, with which letters and numbers can be displayed as filters.",
+  "type": "silverstripe-vendormodule",
+  "keywords": [
+    "silverstripe",
+    "component",
+    "gridfield",
+    "filter"
+  ],
+  "authors": [
+    {
+      "name": "Kai Feldmaier",
+      "email": "kai.feldmaier@clesson.de",
+      "homepage": "https://clesson.de"
+    }
+  ],
+  "require": {
+    "silverstripe/framework": "^4 | ^5"
+  },
+  "extra": {
+    "expose": [
+      "client"
+    ]
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}
