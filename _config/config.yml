@@ -1,0 +1,7 @@
+---
+Name: silverstripe-charfilter-config
+---
+
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_css:
+    - clesson-de/silverstripe-charfilter: dist/css/silverstripe-charfilter.css
