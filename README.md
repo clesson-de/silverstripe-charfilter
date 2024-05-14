@@ -25,5 +25,5 @@ Simply add the component to a Gridfield configuration. Define a field that is to
 ```php
 $config = $gridfield->getConfig();
 // add the component and let it filter the "Name" property
-$config->addComponent(new GridField_CharFilter('Name'));
+$config->addComponent(new GridField_CharFilter('before', 'Name', ['a','b','c']));
 ```

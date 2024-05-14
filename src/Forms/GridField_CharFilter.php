@@ -22,6 +22,7 @@ class GridField_CharFilter extends AbstractGridFieldComponent implements GridFie
     protected $targetFragment;
 
     protected $chars;
+    protected $property;
 
     protected $_selectedChar = '';
 
@@ -30,9 +31,10 @@ class GridField_CharFilter extends AbstractGridFieldComponent implements GridFie
      * @param string $targetFragment
      * @param array $searchFields Which fields on the object in the list should be searched
      */
-    public function __construct($targetFragment = 'before', $chars = null)
+    public function __construct($targetFragment = 'before', $property = 'Name', $chars = null)
     {
         $this->targetFragment = $targetFragment;
+        $this->property = $property;
         $this->chars = $chars ? $chars : $this->defaultChars();
     }
 
@@ -113,7 +115,7 @@ class GridField_CharFilter extends AbstractGridFieldComponent implements GridFie
     public function getManipulatedData(GridField $gridField, SS_List $dataList)
     {
         if ($this->_selectedChar) {
-            return $dataList->filter(['Name:StartsWith' => (string)$this->_selectedChar]);
+            return $dataList->filter([$this->property . ':StartsWith' => (string)$this->_selectedChar]);
         }
         return $dataList;
     }
